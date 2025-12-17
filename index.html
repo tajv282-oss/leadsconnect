@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
+<script>
+    const userAgent = navigator.userAgent.toLowerCase();
+
+    const iosURL = "https://apps.apple.com/in/app/leadsconnect/id6746530035";
+    const androidURL = "https://play.google.com/store/apps/details?id=com.leadsconnect.app";
+    const desktopURL = "https://www.leadsconnect.app/"; // Change this
+
+    if (/iphone|ipad|ipod/.test(userAgent)) {
+        window.location.href = iosURL;
+    } else if (/android/.test(userAgent)) {
+        window.location.href = androidURL;
+    } else {
+        window.location.href = desktopURL;
+    }
+</script>
+</head>
+<body>
+<p>Redirecting... please wait...</p>
+</body>
+</html>
